@@ -9,6 +9,7 @@
     <menu id="setup">
         <menu id="feesAndCharges">
             <item screen="class1$ActivityCodes.browse"/>
+            <item screen="class1$ValuationRoll.browse"/>
         </menu>
     </menu>
 </menu-config>

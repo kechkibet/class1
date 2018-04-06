@@ -6,5 +6,6 @@
         <class>com.company.class1.entity.Citizen</class>
         <class>com.company.class1.entity.Business</class>
         <class>com.company.class1.entity.ActivityCodes</class>
+        <class>com.company.class1.entity.ValuationRoll</class>
     </persistence-unit>
 </persistence>
