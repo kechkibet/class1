@@ -1,4 +1,4 @@
-create table CLASS1_BUSINESS (
+create table CLASS1_ACTIVITY_CODES (
     ID varchar(36) not null,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -8,10 +8,11 @@ create table CLASS1_BUSINESS (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    CONTACT_PERSON_ID varchar(36) not null,
+    ACTIVITY_CODE integer not null,
+    DESCRIPTION varchar(255) not null,
+    UNIT_OF_MEASURE varchar(255),
+    AMOUNT double precision not null,
     STATUS integer not null,
-    NAME varchar(255) not null,
-    BUSINESS_REGISTRATION_NUMBER varchar(255),
     --
     primary key (ID)
 );
