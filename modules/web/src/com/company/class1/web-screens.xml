@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="com/company/class1/screens.xml"/>
+    <screen id="class1$Citizen.browse"
+            template="com/company/class1/web/citizen/citizen-browse.xml"/>
+    <screen id="class1$Business.edit"
+            template="com/company/class1/web/business/business-edit.xml"/>
+    <screen id="class1$Business.browse"
+            template="com/company/class1/web/business/business-browse.xml"/>
+    <screen id="class1$Citizen.edit"
+            template="com/company/class1/web/citizen/citizen-edit.xml"/>
+</screen-config>

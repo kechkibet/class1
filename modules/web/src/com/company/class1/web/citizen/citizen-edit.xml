@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.class1.web.citizen.CitizenEdit"
+        datasource="citizenDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.class1.web.citizen">
+    <dsContext>
+        <datasource id="citizenDs"
+                    class="com.company.class1.entity.Citizen"
+                    view="citizen-view">
+            <collectionDatasource id="businessesDs"
+                                  property="businesses"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="citizenDs">
+            <column width="250px">
+                <field property="firstName"/>
+                <field property="gender"/>
+                <field property="lastName"/>
+                <field property="idNumber"/>
+                <field property="email"/>
+                <field property="phoneNumber"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="businessesBox"
+                  caption="msg://com.company.class1.entity/Citizen.businesses">
+            <table id="businessesTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"
+                            openType="DIALOG"/>
+                    <action id="edit"
+                            openType="DIALOG"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                    <column id="status"/>
+                    <column id="businessRegistrationNumber"/>
+                </columns>
+                <rows datasource="businessesDs"/>
+                <buttonsPanel>
+                    <button action="businessesTable.create"/>
+                    <button action="businessesTable.edit"/>
+                    <button action="businessesTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

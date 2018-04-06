@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.class1.entity.Business"
+          extends="_local"
+          name="business-view-with-citizen">
+        <property name="contactPerson"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.class1.entity.Citizen"
+          extends="_local"
+          name="citizen-view">
+        <property name="businesses"
+                  view="_minimal">
+            <property name="status"/>
+            <property name="businessRegistrationNumber"/>
+        </property>
+    </view>
+</views>
