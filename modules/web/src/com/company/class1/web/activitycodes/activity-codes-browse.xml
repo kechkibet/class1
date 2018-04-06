@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.class1.web.activitycodes.ActivityCodesBrowse"
+        focusComponent="activityCodesesTable"
+        lookupComponent="activityCodesesTable"
+        messagesPack="com.company.class1.web.activitycodes">
+    <dsContext>
+        <groupDatasource id="activityCodesesDs"
+                         class="com.company.class1.entity.ActivityCodes"
+                         view="_local">
+            <query>
+                <![CDATA[select e from class1$ActivityCodes e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="activityCodesesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="activityCodesesTable"
+                datasource="activityCodesesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="activityCodesesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="activityCode"/>
+                <column id="description"/>
+                <column id="unitOfMeasure"/>
+                <column id="amount"/>
+                <column id="status"/>
+            </columns>
+            <rows datasource="activityCodesesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="activityCodesesTable.create"/>
+                <button id="editBtn"
+                        action="activityCodesesTable.edit"/>
+                <button id="removeBtn"
+                        action="activityCodesesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

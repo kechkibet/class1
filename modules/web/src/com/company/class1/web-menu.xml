@@ -6,4 +6,9 @@
     <menu id="citizenManagement">
         <item screen="class1$Citizen.browse"/>
     </menu>
+    <menu id="setup">
+        <menu id="feesAndCharges">
+            <item screen="class1$ActivityCodes.browse"/>
+        </menu>
+    </menu>
 </menu-config>

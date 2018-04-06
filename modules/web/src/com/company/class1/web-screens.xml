@@ -9,4 +9,8 @@
             template="com/company/class1/web/business/business-browse.xml"/>
     <screen id="class1$Citizen.edit"
             template="com/company/class1/web/citizen/citizen-edit.xml"/>
+    <screen id="class1$ActivityCodes.browse"
+            template="com/company/class1/web/activitycodes/activity-codes-browse.xml"/>
+    <screen id="class1$ActivityCodes.edit"
+            template="com/company/class1/web/activitycodes/activity-codes-edit.xml"/>
 </screen-config>
