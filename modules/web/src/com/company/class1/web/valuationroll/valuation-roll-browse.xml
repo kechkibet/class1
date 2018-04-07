@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.class1.web.valuationroll.ValuationRollBrowse"
+        focusComponent="valuationRollsTable"
+        lookupComponent="valuationRollsTable"
+        messagesPack="com.company.class1.web.valuationroll">
+    <dsContext>
+        <groupDatasource id="valuationRollsDs"
+                         class="com.company.class1.entity.ValuationRoll"
+                         view="_local">
+            <query>
+                <![CDATA[select e from class1$ValuationRoll e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="valuationRollsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="valuationRollsTable"
+                datasource="valuationRollsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="valuationRollsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="rollType"/>
+                <column id="siteValue"/>
+                <column id="annualRate"/>
+                <column id="exempt"/>
+                <column id="ratableValue"/>
+                <column id="sizeInHa"/>
+            </columns>
+            <rows datasource="valuationRollsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="valuationRollsTable.create"/>
+                <button id="editBtn"
+                        action="valuationRollsTable.edit"/>
+                <button id="removeBtn"
+                        action="valuationRollsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

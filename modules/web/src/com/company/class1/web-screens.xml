@@ -13,4 +13,8 @@
             template="com/company/class1/web/activitycodes/activity-codes-browse.xml"/>
     <screen id="class1$ActivityCodes.edit"
             template="com/company/class1/web/activitycodes/activity-codes-edit.xml"/>
+    <screen id="class1$ValuationRoll.browse"
+            template="com/company/class1/web/valuationroll/valuation-roll-browse.xml"/>
+    <screen id="class1$ValuationRoll.edit"
+            template="com/company/class1/web/valuationroll/valuation-roll-edit.xml"/>
 </screen-config>
